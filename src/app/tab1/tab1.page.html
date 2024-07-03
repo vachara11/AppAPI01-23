@@ -1,17 +1,23 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
+  <ion-toolbar color="secondary">
     <ion-title>
-      Tab 1
+      <ion-icon name="radio-outline" ></ion-icon>
+      Call API
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content class="ion-padding" [fullscreen]="true">
+  <ion-item *ngFor="let item of users">
+    <ion-avatar>
+      <img src="../../assets/img/man.png">
+    </ion-avatar>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+    <ion-label class="ion-padding">
+      <h2>Title : </h2>
+      <ion-badge>ID : </ion-badge>
+    </ion-label>
+
+    <ion-button color="success" slot="end">true</ion-button>
+  </ion-item>
 </ion-content>
